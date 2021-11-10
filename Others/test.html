@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>|Dice Game|</title>
+<script src="https://kit.fontawesome.com/32c987a958.js"></script>
+<link rel="shortcut icon" type="image/png" href="../images/logo.png" />
+<link rel="stylesheet" href="test.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<div class="background">
+ <div class="nav">
+<div class="logo">
+<img  src="../images/Logo-D.png" alt="Dominators">
+</div>
+<div class="nav-bar">
+<span class="bar"onClick="myFunction()">&#9776;</span>
+<ul id="menu">
+    <li><a href="../index.html"><i class="fas fa-house-user"></i> HOME</a></li>
+    <li><a href="test.html"><i class="fas fa-dice"></i> DICE GAME</a></li>
+  
+    
+</ul>     
+</div> 
+     
+
+<div class="page">
+<button type="button" class="butn1" 
+            onClick="restart()"> 
+            Restart
+        </button>
+<div id="part">
+<h2 id="pa1">Player 1</h2>
+<h2 id="pa2">Player 2</h2>
+<input type="button" class="roll1" value="Roll" onclick="disable1()" onmousedown="score()">
+<input type="button" class="roll2" value="Roll" onclick="disable2()">
+<button type="button" class="butn" 
+            onClick="editNames()"> 
+            Edit Names 
+        </button> 
+<section class="D-main">
+<div id=cube>
+<img class="face front" src="../images/D-1.png" alt="1">
+<img class="face back" src="../images/D-2.png" alt="2">
+<img class="face right" src="../images/D-3.png" alt="3">
+<img class="face left" src="../images/D-4.png" alt="4">
+<img class="face top" src="../images/D-5.png" alt="5">
+<img class="face bottom" src="../images/D-6.png" alt="6">
+</div>
+</section>
+<section class="D-main1">
+<div id=cube1>
+<img class="face1 front1" src="../images/E-1.png" alt="1">
+<img class="face1 back1" src="../images/E-2.png" alt="2">
+<img class="face1 right1" src="../images/E-3.png" alt="3">
+<img class="face1 left1" src="../images/E-4.png" alt="4">
+<img class="face1 top1" src="../images/E-5.png" alt="5">
+<img class="face1 bottom1" src="../images/E-6.png" alt="6">
+<!--<input type="button" class="btn" value="Click me">-->
+</div>
+</section>
+</div>
+</div>
+<div id="score">
+<div class="score1">
+    <p class="p1-name">Player 1</p> <p> Score: </p><p id=p1><b>0</b></p>
+</div>
+<div class="score2">
+<p class="p2-name">Player 2</p> <p> Score: </p><p id=p2><b>0</b></p>
+</div>
+</div>
+    
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p class="w-pa">Player 1 </p>
+      <p class="won">WON!</p>
+      <div id="won">
+      <p>Score :</p>
+      <p class="f-score">0</p>
+        <div id="restart"></div>
+        <span class="start" id="cool"><i class="fas fa-play-circle"></i></span>
+          
+      </div>
+  </div>
+
+</div>    
+    </div>
+</div>
+<script>
+        function myFunction(){
+           var x = document.getElementById("menu"); 
+            
+            if(x.style.display == "block")
+            {
+                x.style.display = "none";
+            }
+            else{
+                x.style.display = "block";
+            }
+        }
+    </script>
+<script src="Main.js">
+
+</script>
+</body>
+</html>
